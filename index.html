@@ -409,30 +409,22 @@
 <!-- ============ CERTIFICATIONS ============ -->
 <section id="certifications">
   <style>
-    /* Grid layout with top alignment */
-    .doc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      align-items: start; /* Prevents 09 & 11 from growing when 10 expands */
+    /* Equalize height and keep alignment clean */
+    #certifications .doc-grid {
+      align-items: flex-start; /* CRITICAL: Prevents 09 & 11 from expanding when 10 opens */
     }
 
-    /* Standardized Card Height */
-    .doc-card {
+    #certifications .doc-card {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 460px; /* Standardizes initial card height across all cards */
+      min-height: 380px; /* Standardizes all card heights to match the last row */
       box-sizing: border-box;
     }
 
-    /* Ensures card content takes up top space and pushes action links to the bottom */
-    .doc-card-body {
-      flex-grow: 1;
-    }
-
-    .doc-card a.view-link {
-      margin-top: auto;
+    #certifications .doc-card > a,
+    #certifications .doc-card > details {
+      margin-top: auto; /* Pushes action links/toggles to the bottom edge */
     }
   </style>
 
@@ -442,108 +434,77 @@
       <h2>Certificates &amp; Achievements</h2>
       <p>Courses, awards and professional certifications.</p>
     </div>
-    
+
     <div class="doc-grid">
-      <!-- Card 01 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">01</div>
-          <h3>Bronze medal — iIDEX 2026</h3>
-          <p>AI-IoT Smart Medicine Dispenser with Integrated Hospital Management System, International Innovation and Design Expo 2026.</p>
-        </div>
-        <a href="documents/certificate-1.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">01</div>
+        <h3>Bronze medal — iIDEX 2026</h3>
+        <p>AI-IoT Smart Medicine Dispenser with Integrated Hospital Management System, International Innovation and Design Expo 2026.</p>
+        <a href="documents/certificate-1.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 02 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">02</div>
-          <h3>AI Safety</h3>
-          <p>Ministry of Digital (Malaysia) — ethical principles and safe practices in artificial intelligence.</p>
-        </div>
-        <a href="documents/certificate-2.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">02</div>
+        <h3>AI Safety</h3>
+        <p>Ministry of Digital (Malaysia) — ethical principles and safe practices in artificial intelligence.</p>
+        <a href="documents/certificate-2.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 03 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">03</div>
-          <h3>AI for All: Basics to GenAI</h3>
-          <p>NVIDIA — Certificate of Completion, GenAI practice fundamentals.</p>
-        </div>
-        <a href="documents/certificate-3.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">03</div>
+        <h3>AI for All: Basics to GenAI</h3>
+        <p>NVIDIA — Certificate of Completion, GenAI practice fundamentals.</p>
+        <a href="documents/certificate-3.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 04 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">04</div>
-          <h3>R Programming (Beginners)</h3>
-          <p>HRD Corp e-LATiH — Data Science and Machine Learning with R.</p>
-        </div>
-        <a href="documents/certificate-4.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">04</div>
+        <h3>R Programming (Beginners)</h3>
+        <p>HRD Corp e-LATiH — Data Science and Machine Learning with R.</p>
+        <a href="documents/certificate-4.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 05 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">05</div>
-          <h3>Japanese Language — Upper-Beginner</h3>
-          <p>FAST OFFER International — Japanese Language Program certification.</p>
-        </div>
-        <a href="documents/certificate-5.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">05</div>
+        <h3>Japanese Language — Upper-Beginner</h3>
+        <p>FAST OFFER International — Japanese Language Program certification.</p>
+        <a href="documents/certificate-5.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 06 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">06</div>
-          <h3>Silver medal — INOTEK 2026</h3>
-          <p>Silver Medal certificate for IDP Project, INOTEK 2026.</p>
-        </div>
-        <a href="documents/certificate-6.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">06</div>
+        <h3>Silver medal — INOTEK 2026</h3>
+        <p>Silver Medal certificate for IDP Project, INOTEK 2026.</p>
+        <a href="documents/certificate-6.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 07 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">07</div>
-          <h3>Bronze medal — INOTEK 2023</h3>
-          <p>Bronze Medal certificate for Diploma Project, INOTEK 2026.</p>
-        </div>
-        <a href="documents/certificate-7.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">07</div>
+        <h3>Bronze medal — INOTEK 2023</h3>
+        <p>Bronze Medal certificate for Diploma Project, INOTEK 2026.</p>
+        <a href="documents/certificate-7.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 08 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">08</div>
-          <h3>HCIA-Big Data V3.5 Course</h3>
-          <p>Huawei — HCIA-Big Data V3.5 course completion certificate.</p>
-        </div>
-        <a href="documents/certificate-8.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">08</div>
+        <h3>HCIA-Big Data V3.5 Course</h3>
+        <p>Huawei — HCIA-Big Data V3.5 course completion certificate.</p>
+        <a href="documents/certificate-8.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 09 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">09</div>
-          <h3>Introduction to ARM On-Demand Training Programme</h3>
-          <p>Ministry of Economy (Malaysia) — National Semiconductor Strategy (NSS) initiative on ARM architecture fundamentals and embedded systems design.</p>
-        </div>
-        <a href="documents/certificate-9.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">09</div>
+        <h3>Introduction to ARM On-Demand Training Programme</h3>
+        <p>Ministry of Economy (Malaysia) — National Semiconductor Strategy (NSS) initiative on ARM architecture fundamentals and embedded systems design.</p>
+        <a href="documents/certificate-9.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
 
-      <!-- Card 10 & 12 (Standardized + Expandable) -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">10</div>
-          <h3>Databases for Developers: Foundations</h3>
-          <p>Oracle — Certificate of Excellence in relational database design, SQL querying and data management.</p>
-          <a href="documents/certificate-10.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
-        </div>
+        <div class="doc-icon">10</div>
+        <h3>Databases for Developers: Foundations</h3>
+        <p>Oracle — Certificate of Excellence in relational database design, SQL querying and data management.</p>
+        <a href="documents/certificate-10.pdf" target="_blank" rel="noopener" download>View certificate →</a>
 
-        <!-- Expandable toggle for additional cert -->
         <details style="margin-top: 15px; border-top: 1px dashed #e5e7eb; padding-top: 10px;">
           <summary style="cursor: pointer; font-size: 0.85rem; font-weight: 600; color: #8b7355; list-style: none;">
             + Show all
@@ -551,23 +512,19 @@
           <div style="margin-top: 10px;">
             <h4 style="margin: 0 0 5px 0; font-size: 1rem;">Basics of SQL Statements &amp; Indexes</h4>
             <p style="margin: 0 0 8px 0; font-size: 0.85rem;">
-              UniAthena (Cambridge International Qualifications) — Certificate in SQL querying, statement execution and database indexing.
+              UniAthena (Cambridge International Qualifications) — Certificate in SQL querying, statement execution and database indexing[cite: 1, 2, 3].
             </p>
-            <a href="documents/certificate-12.pdf" class="view-link" target="_blank" rel="noopener" download style="font-size: 0.85rem;">View certificate →</a>
+            <a href="documents/certificate-12.pdf" target="_blank" rel="noopener" download style="font-size: 0.85rem;">View certificate →</a>
           </div>
         </details>
       </div>
 
-      <!-- Card 11 -->
       <div class="doc-card">
-        <div class="doc-card-body">
-          <div class="doc-icon">11</div>
-          <h3>Linux Unhatched</h3>
-          <p>Cisco Networking Academy — Command-line interface navigation, file system administration, shell scripting and network configuration.</p>
-        </div>
-        <a href="documents/certificate-11.pdf" class="view-link" target="_blank" rel="noopener" download>View certificate →</a>
+        <div class="doc-icon">11</div>
+        <h3>Linux Unhatched</h3>
+        <p>Cisco Networking Academy — Command-line interface navigation, file system administration, shell scripting and network configuration.</p>
+        <a href="documents/certificate-11.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
-
     </div>
   </div>
 </section>
