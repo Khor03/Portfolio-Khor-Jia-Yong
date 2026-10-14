@@ -408,6 +408,14 @@
 
 <!-- ============ CERTIFICATIONS ============ -->
 <section id="certifications">
+  <style>
+    /* CRITICAL FIX: Prevents neighboring cards from stretching when Card 10 expands */
+    .doc-grid {
+      display: grid; /* Change to flex if your layout uses display: flex; */
+      align-items: start; /* Ensures cards align to the top and don't stretch */
+    }
+  </style>
+
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Certifications</div>
@@ -470,7 +478,7 @@
         <a href="documents/certificate-9.pdf" target="_blank" rel="noopener" download>View certificate →</a>
       </div>
       <div class="doc-card">
-          <div class="doc-icon">10 &amp; 12</div>
+          <div class="doc-icon">10</div>
           
           <!-- Main visible cert -->
           <h3>Databases for Developers: Foundations</h3>
